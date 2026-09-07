@@ -1,0 +1,1025 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Happy 5 Month Anniversary 💜</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Poppins,sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(255,255,255,.5),transparent 25%),
+        radial-gradient(circle at 80% 80%,rgba(255,190,240,.4),transparent 25%),
+        linear-gradient(135deg,#cdb3f5,#f8eaff,#bda1e9);
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(255,255,255,.18);
+    filter:blur(80px);
+    animation:bgGlow 7s ease-in-out infinite alternate;
+}
+
+@keyframes bgGlow{
+    from{transform:translate(-100px,-50px) scale(.9)}
+    to{transform:translate(100px,50px) scale(1.2)}
+}
+
+/* BOOK */
+
+.book{
+    position:relative;
+    width:min(92vw,430px);
+    height:min(88vh,700px);
+    perspective:2000px;
+    z-index:5;
+}
+
+.page{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    border-radius:25px;
+    transform-origin:left center;
+    backface-visibility:hidden;
+    background:rgba(255,255,255,.9);
+    border:1px solid rgba(255,255,255,.8);
+    box-shadow:
+        0 25px 60px rgba(65,30,90,.3),
+        inset 0 0 35px rgba(255,255,255,.25);
+    transition:
+        transform 1s cubic-bezier(.65,.05,.36,1),
+        box-shadow .5s;
+}
+
+.page:nth-child(1){z-index:2}
+.page:nth-child(2){z-index:1}
+
+.page.turned{
+    transform:rotateY(-180deg) translateY(-8px);
+    box-shadow:none;
+}
+
+/* PAGE 1 */
+
+.first-page{
+    padding:28px 22px;
+    background:
+        radial-gradient(circle at top,#fff 0%,transparent 35%),
+        linear-gradient(145deg,#fffaff,#f4e8ff);
+}
+
+.content{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.small-title{
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#9b73b7;
+    margin-top:3px;
+}
+
+h1{
+    margin-top:7px;
+    font-family:"Playfair Display",serif;
+    font-size:31px;
+    line-height:1.15;
+    color:#70418e;
+}
+
+.heart{
+    position:relative;
+    margin-top:14px;
+    font-size:55px;
+    filter:drop-shadow(0 5px 12px rgba(130,60,160,.25));
+    animation:heartBeat 1.8s ease-in-out infinite;
+}
+
+@keyframes heartBeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.09)}
+}
+
+.month-badge{
+    margin-top:7px;
+    padding:7px 18px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ead5ff,#f8dff3);
+    color:#75438f;
+    font-size:13px;
+    font-weight:600;
+    box-shadow:0 5px 18px rgba(120,70,150,.12);
+}
+
+.subtitle{
+    margin-top:8px;
+    color:#986bb1;
+    font-size:14px;
+}
+
+.message{
+    max-width:360px;
+    margin-top:15px;
+    color:#65506f;
+    font-size:13.5px;
+    line-height:1.65;
+}
+
+/* GIFT */
+
+.gift-area{
+    position:relative;
+    width:180px;
+    height:190px;
+    margin-top:21px;
+    cursor:pointer;
+}
+
+.gift-area:after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:5px;
+    width:130px;
+    height:20px;
+    transform:translateX(-50%);
+    background:rgba(100,50,130,.13);
+    filter:blur(10px);
+    border-radius:50%;
+}
+
+.gift{
+    position:absolute;
+    left:30px;
+    bottom:18px;
+    width:120px;
+    height:90px;
+    border-radius:8px;
+    background:linear-gradient(135deg,#a96bd3,#8950b8);
+    box-shadow:0 10px 20px rgba(90,40,120,.2);
+    transition:.3s;
+}
+
+.gift-area:hover .gift{
+    transform:translateY(-3px);
+}
+
+.gift:before{
+    content:"";
+    position:absolute;
+    left:51px;
+    top:0;
+    width:18px;
+    height:100%;
+    background:#f5d991;
+}
+
+.lid{
+    position:absolute;
+    left:-10px;
+    top:-27px;
+    width:140px;
+    height:34px;
+    border-radius:7px;
+    background:linear-gradient(135deg,#9b5bc7,#7943a7);
+    transform-origin:center bottom;
+    transition:.85s cubic-bezier(.2,.8,.2,1);
+}
+
+.lid:before{
+    content:"";
+    position:absolute;
+    left:61px;
+    width:18px;
+    height:34px;
+    background:#f5d991;
+}
+
+.gift.open .lid{
+    transform:rotate(-18deg) translateY(-19px);
+}
+
+/* CAKE */
+
+.cake{
+    position:absolute;
+    left:18px;
+    bottom:105px;
+    width:84px;
+    height:58px;
+    border-radius:10px 10px 5px 5px;
+    background:linear-gradient(#fff6df,#ffe9bc);
+    opacity:0;
+    transform:translateY(30px);
+    transition:.8s cubic-bezier(.2,.8,.2,1);
+    box-shadow:0 5px 14px rgba(100,50,70,.15);
+}
+
+.gift.open .cake{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.cake:before{
+    content:"";
+    position:absolute;
+    top:13px;
+    left:0;
+    width:100%;
+    height:11px;
+    background:#efa0cc;
+    border-radius:5px;
+}
+
+.cake:after{
+    content:"";
+    position:absolute;
+    left:5px;
+    bottom:-8px;
+    width:74px;
+    height:10px;
+    background:#d99962;
+    border-radius:50%;
+}
+
+.candles{
+    position:absolute;
+    top:-26px;
+    left:13px;
+    width:58px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.candle{
+    position:relative;
+    width:9px;
+    height:26px;
+    border-radius:3px;
+    background:linear-gradient(#c57bdd,#a75fc7);
+}
+
+.flame{
+    position:absolute;
+    left:-1px;
+    top:-17px;
+    width:11px;
+    height:16px;
+    border-radius:50%;
+    background:#ffc13d;
+    box-shadow:
+        0 0 7px #ffca4c,
+        0 0 16px rgba(255,170,40,.8);
+    animation:flicker .25s infinite alternate;
+}
+
+.flame.off{
+    opacity:0;
+    animation:none;
+}
+
+@keyframes flicker{
+    from{transform:scale(1) rotate(-2deg)}
+    to{transform:scale(.85) rotate(3deg)}
+}
+
+/* SMOKE */
+
+.smoke{
+    position:absolute;
+    left:46px;
+    top:-45px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#aaa;
+    opacity:0;
+}
+
+.smoke.show{
+    animation:smoke 2.6s ease-out forwards;
+}
+
+@keyframes smoke{
+    0%{
+        opacity:.55;
+        transform:translate(0,0) scale(.6);
+    }
+    40%{opacity:.4}
+    100%{
+        opacity:0;
+        transform:translate(18px,-70px) scale(3);
+    }
+}
+
+.tap{
+    color:#83539e;
+    font-size:12px;
+    margin-top:0;
+}
+
+/* PAGE 2 */
+
+.photo-page{
+    background:#eadcc4;
+    overflow:hidden;
+}
+
+.page2-scroll{
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    padding-bottom:25px;
+}
+
+.page2-scroll::-webkit-scrollbar{
+    width:4px;
+}
+
+.page2-scroll::-webkit-scrollbar-thumb{
+    background:rgba(130,90,120,.35);
+    border-radius:10px;
+}
+
+/* COUPLE PHOTO */
+
+.couple-photo{
+    position:relative;
+    width:calc(100% - 22px);
+    height:220px;
+    margin:11px auto 0;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:
+        0 9px 25px rgba(70,40,50,.2),
+        0 0 0 5px rgba(255,248,235,.65);
+}
+
+.couple-photo img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center top;
+    filter:saturate(.93);
+}
+
+.couple-photo:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to bottom,
+        transparent 55%,
+        rgba(45,20,35,.23)
+    );
+    pointer-events:none;
+}
+
+.photo-caption{
+    position:absolute;
+    left:14px;
+    bottom:11px;
+    z-index:2;
+    padding:5px 12px;
+    border-radius:20px;
+    color:white;
+    font-family:"Playfair Display",serif;
+    font-size:16px;
+    background:rgba(75,40,75,.4);
+    backdrop-filter:blur(6px);
+}
+
+/* MESSAGE CARD */
+
+.photo-text{
+    position:relative;
+    z-index:2;
+    margin:16px 11px 0;
+    padding:19px 17px 20px;
+    border-radius:21px;
+    background:rgba(255,248,238,.95);
+    box-shadow:
+        0 10px 28px rgba(50,30,30,.15),
+        inset 0 1px rgba(255,255,255,.9);
+    color:#604d58;
+}
+
+.photo-text:before{
+    content:"♡";
+    position:absolute;
+    top:7px;
+    right:14px;
+    color:#c89ab5;
+    font-size:25px;
+}
+
+.photo-text h2{
+    margin:0 18px 12px 0;
+    text-align:center;
+    font-family:"Playfair Display",serif;
+    font-size:21px;
+    line-height:1.25;
+    color:#87526f;
+}
+
+.photo-text p{
+    font-size:12.4px;
+    line-height:1.65;
+    text-align:left;
+}
+
+.photo-text b{
+    color:#794b68;
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    justify-content:center;
+    margin-top:15px;
+    color:#a67491;
+}
+
+.divider span{
+    width:45px;
+    height:1px;
+    background:#ba91a9;
+}
+
+.divider strong{
+    font-size:15px;
+}
+
+/* PAGE NUMBER */
+
+.page-number{
+    position:fixed;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:50;
+    padding:6px 15px;
+    border-radius:30px;
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(8px);
+    color:#70478b;
+    font-size:11px;
+    box-shadow:0 4px 15px rgba(60,30,90,.12);
+}
+
+/* CONTROLS */
+
+.controls{
+    position:fixed;
+    z-index:50;
+    left:50%;
+    bottom:17px;
+    transform:translateX(-50%);
+    display:flex;
+    gap:14px;
+}
+
+button{
+    width:45px;
+    height:45px;
+    border:1px solid rgba(255,255,255,.7);
+    border-radius:50%;
+    background:rgba(255,255,255,.78);
+    color:#70418f;
+    font-size:23px;
+    cursor:pointer;
+    box-shadow:0 7px 20px rgba(60,30,90,.2);
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    background:white;
+}
+
+button:active{
+    transform:scale(.92);
+}
+
+/* FLOATING PARTICLES */
+
+.float{
+    position:fixed;
+    pointer-events:none;
+    z-index:1;
+    opacity:0;
+    animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(110vh) rotate(0);
+        opacity:0;
+    }
+    15%{opacity:.5}
+    85%{opacity:.4}
+    100%{
+        transform:translateY(-10vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* EMOJI RAIN */
+
+.emoji{
+    position:fixed;
+    top:-50px;
+    z-index:100;
+    pointer-events:none;
+    font-size:24px;
+    animation:emojiFall linear forwards;
+}
+
+@keyframes emojiFall{
+    0%{
+        transform:translateY(-40px) rotate(0);
+        opacity:0;
+    }
+    10%{opacity:1}
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    .book{
+        width:92vw;
+        height:86vh;
+    }
+
+    .first-page{
+        padding:23px 18px;
+    }
+
+    h1{
+        font-size:27px;
+    }
+
+    .heart{
+        font-size:49px;
+        margin-top:10px;
+    }
+
+    .message{
+        font-size:12.5px;
+        line-height:1.55;
+        margin-top:11px;
+    }
+
+    .gift-area{
+        margin-top:15px;
+        transform:scale(.9);
+    }
+
+    .couple-photo{
+        height:185px;
+    }
+
+    .photo-caption{
+        font-size:14px;
+    }
+
+    .photo-text{
+        padding:17px 14px 19px;
+    }
+
+    .photo-text h2{
+        font-size:19px;
+    }
+
+    .photo-text p{
+        font-size:11.5px;
+        line-height:1.62;
+    }
+
+    .controls{
+        bottom:10px;
+    }
+
+    button{
+        width:42px;
+        height:42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-number" id="pageNumber">Page 1 / 2</div>
+
+<div class="book">
+
+<!-- ================= PAGE 1 ================= -->
+
+<section class="page first-page">
+
+<div class="content">
+
+<div class="small-title">A Little Something For You</div>
+
+<h1>Happy 5 Months</h1>
+
+<div class="heart">💜</div>
+
+<div class="month-badge">
+5 Months • Together • Always ✨
+</div>
+
+<div class="subtitle">
+My Darling 🥰
+</div>
+
+<p class="message">
+Five beautiful months filled with smiles, memories
+and special moments. 🌸✨
+<br>
+Here's to everything we've shared and all the beautiful
+memories still waiting for us. 💜
+</p>
+
+<div class="gift-area" id="giftArea">
+
+<div class="gift" id="gift">
+
+<div class="lid"></div>
+
+<div class="cake">
+
+<div class="candles">
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+</div>
+
+<div class="smoke"></div>
+
+</div>
+</div>
+</div>
+
+<p class="tap" id="tapText">
+🎁 Tap the gift for a little surprise
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="page photo-page">
+
+<div class="page2-scroll">
+
+<!-- COUPLE PHOTO -->
+
+<div class="couple-photo">
+
+<img
+src="anniversary-couple-photo.png"
+alt="Cute couple memory"
+>
+
+<div class="photo-caption">
+You & Me 💜
+</div>
+
+</div>
+
+
+<!-- MESSAGE -->
+
+<div class="photo-text">
+
+<h2>
+💜 Happy 5 Month Anniversary, My Darling 🥰
+</h2>
+
+<p>
+
+We completed 5 months together. I know ki ye 5th month
+hum dono ke liye accha nahi gaya, especially tumhare liye.
+Par tum tension mat lo, time ke saath sab normal ho jayega. ❤️
+
+<br><br>
+
+Aur ek baat bataun? Main tumhare saamne apni kuch feelings
+express karna chahta hoon. Ye last week mere liye bahut hard
+raha hai. Tumhare bina mera <i>sarda</i> (survive) nahi hota…
+matlab tumhare bina mera mann hi nahi lagta.
+
+<br><br>
+
+Mere paas yahan mere dost hain, wo roz party bhi karte hain
+aur kabhi-kabhi main bhi kar leta hoon. Main roz khelne bhi
+jata hoon, aur ab bus mein peeche bhi baithta hoon.
+
+Aur tumhe pata hai, main jaan-boojhkar wahi wali seat pe
+baithta hoon jahan tum pehle mere milne se pehle baitha
+karti thi. 🥺
+
+<br><br>
+
+Sab kuch theek chal raha hai, bas mera mann nahi lag raha.
+Haan, apne doston se baat karke thoda khush ho jata hoon,
+par wo khushi bas temporary rehti hai.
+
+<br><br>
+
+Chalo, ab mujhe ye paragraph zyada lamba nahi karna chahiye.
+❤️ Bas itna bolunga—
+
+<b>apna khayal rakha karo, okay?</b>
+
+Kyuki main maanta hoon ki health aapki hai…
+
+<b>par jaan toh aap meri ho na. 🥰💜</b>
+
+</p>
+
+<div class="divider">
+<span></span>
+<strong>♥</strong>
+<span></span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!-- CONTROLS -->
+
+<div class="controls">
+<button id="prevBtn" aria-label="Previous page">‹</button>
+<button id="nextBtn" aria-label="Next page">›</button>
+</div>
+
+
+<script>
+
+const pages=document.querySelectorAll(".page");
+const nextBtn=document.getElementById("nextBtn");
+const prevBtn=document.getElementById("prevBtn");
+const pageNumber=document.getElementById("pageNumber");
+
+let currentPage=0;
+
+
+/* PAGE TURN */
+
+function updatePages(){
+
+    pages.forEach((page,index)=>{
+
+        if(index<currentPage){
+            page.classList.add("turned");
+        }else{
+            page.classList.remove("turned");
+        }
+
+    });
+
+    pageNumber.textContent=
+        "Page "+(currentPage+1)+" / "+pages.length;
+}
+
+nextBtn.onclick=()=>{
+    if(currentPage<pages.length-1){
+        currentPage++;
+        updatePages();
+    }
+};
+
+prevBtn.onclick=()=>{
+    if(currentPage>0){
+        currentPage--;
+        updatePages();
+    }
+};
+
+
+/* KEYBOARD */
+
+document.addEventListener("keydown",e=>{
+
+    if(e.key==="ArrowRight")
+        nextBtn.click();
+
+    if(e.key==="ArrowLeft")
+        prevBtn.click();
+
+});
+
+
+/* GIFT */
+
+const giftArea=document.getElementById("giftArea");
+const gift=document.getElementById("gift");
+const tapText=document.getElementById("tapText");
+
+let opened=false;
+
+giftArea.addEventListener("click",()=>{
+
+    if(opened)return;
+
+    opened=true;
+
+    gift.classList.add("open");
+
+    tapText.textContent=
+        "💜 Make a little anniversary wish... ✨";
+
+    setTimeout(()=>{
+
+        document
+        .querySelectorAll(".flame")
+        .forEach(flame=>{
+            flame.classList.add("off");
+        });
+
+        document
+        .querySelectorAll(".smoke")
+        .forEach(smoke=>{
+            smoke.classList.add("show");
+        });
+
+        tapText.textContent=
+            "💜 Happy 5 Month Anniversary! 👏🥳";
+
+        emojiRain();
+
+    },3000);
+
+});
+
+
+/* EMOJI RAIN */
+
+function emojiRain(){
+
+    const emojis=["👏","🥳"];
+
+    for(let i=0;i<75;i++){
+
+        const e=document.createElement("div");
+
+        e.className="emoji";
+
+        e.textContent=
+            emojis[Math.floor(Math.random()*emojis.length)];
+
+        e.style.left=
+            Math.random()*100+"vw";
+
+        e.style.fontSize=
+            (18+Math.random()*14)+"px";
+
+        e.style.animationDuration=
+            (2.5+Math.random()*3)+"s";
+
+        e.style.animationDelay=
+            Math.random()*1.5+"s";
+
+        document.body.appendChild(e);
+
+        setTimeout(()=>{
+            e.remove();
+        },6500);
+
+    }
+
+}
+
+
+/* FLOATING HEARTS / SPARKLES */
+
+function createFloat(){
+
+    const e=document.createElement("div");
+
+    e.className="float";
+
+    const symbols=[
+        "💜",
+        "💖",
+        "✨",
+        "🌸",
+        "💫",
+        "♡"
+    ];
+
+    e.textContent=
+        symbols[Math.floor(Math.random()*symbols.length)];
+
+    e.style.left=
+        Math.random()*100+"vw";
+
+    e.style.fontSize=
+        (10+Math.random()*17)+"px";
+
+    e.style.animationDuration=
+        (7+Math.random()*8)+"s";
+
+    document.body.appendChild(e);
+
+    setTimeout(()=>{
+        e.remove();
+    },16000);
+
+}
+
+setInterval(createFloat,650);
+
+
+/* SWIPE */
+
+let startX=0;
+
+document.addEventListener("touchstart",e=>{
+    startX=e.touches[0].clientX;
+},{passive:true});
+
+document.addEventListener("touchend",e=>{
+
+    const endX=e.changedTouches[0].clientX;
+    const difference=endX-startX;
+
+    if(Math.abs(difference)>50){
+
+        if(difference<0)
+            nextBtn.click();
+        else
+            prevBtn.click();
+
+    }
+
+},{passive:true});
+
+
+updatePages();
+
+</script>
+
+</body>
+</html>
+```
